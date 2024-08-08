@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-- Check out the live demo of the Todo app here: [Todo App Live Demo](https://ajithkanna1234.github.io/TodoApp)
+- Check out the live demo of the Todo app here: [Todo App Live Demo](https://ajithkanna1234.github.io/TodoList-ajith)
 
 ## Features
 
