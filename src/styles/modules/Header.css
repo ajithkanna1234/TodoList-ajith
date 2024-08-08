@@ -1,0 +1,38 @@
+Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 30px 10px;
+    height: 15%;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+header h1{
+    margin: auto;
+}
+
+.word-o{
+    color: orangered;
+}
+
+.word-second-o{
+    color: dodgerblue;
+    margin-right: 10px;
+}
+
+.logout-button{
+    padding: 10px;
+    border-radius: 6px;
+    border-top:none;
+    border-bottom: 4px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 3px solid #ddd;
+    font-weight: bold;
+    background-color: white;
+}
+
+.logout-button:hover{
+    transition: 1s ease;
+    color: orange;
+}
