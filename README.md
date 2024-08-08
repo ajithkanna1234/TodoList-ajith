@@ -1,76 +1,81 @@
-# Todo App with User Authentication #
+# Todo App with User Authentication
 
-This repository contains a simple Todo app built with React that includes user authentication features. Users can register, log in, and manage their todo lists within the application. The project is organized with modular components and uses React's Context API for state management.
+- This repository contains a simple Todo app built with React that includes user authentication features. 
+- Users can register, log in, and manage their todo lists within the application. 
+- The project is organized using modular components and leverages React's Context API for state management.
 
-# Features #
+## Live Demo
 
-User Authentication: Users can register and log in to manage their todos.
-Todo Management: Add, toggle, delete, and clear todos.
-State Management: Utilizes Context API for managing global state across the app.
-Modular Components: Built with reusable and maintainable components.
-CSS Modules: Scoped and organized styles for each component.
+- Check out the live demo of the Todo app here: [Todo App Live Demo](https://ajithkanna1234.github.io/TodoApp)
 
-# Project Structure #
+## Features
 
-src/
-├── components/
-│   ├── Header.js
-│   ├── Body.js
-│   ├── AddTodo.js
-│   ├── TodoList.js
-│   ├── TodoItem.js
-│   ├── ToggleTodo.js
-│   ├── DeleteTodo.js
-│   ├── ClearTodo.js
-│   ├── Footer.js
-│   └── users/
-│       ├── Login.js
-│       └── Register.js
-│
-├── hooks/
-│   └── Store/
-│       └── Context.js
-│
-├── styles/
-│   ├── App.css
-│   ├── modules/
-│       ├── Header.css
-│       ├── Login.css
-│       ├── Register.css
-│       ├── TodoList.css
-│       ├── TodoItem.css
-│       └── Footer.css
-│
-├── utils/
-│   ├── localStorageUtils.js
-│
-└── App.js
+- **User Authentication:** Users can register and log in to manage their todos.
+- **Todo Management:** Users can add, toggle, delete, and clear todos.
+- **State Management:** Utilizes the Context API for managing global state across the app.
+- **Modular Components:** Built with reusable and maintainable components.
+- **CSS Modules:** Scoped and organized styles for each component.
 
-# Components Overview #
+## Project Structure
 
-App.js: The root component that wraps the app in MyContextProvider to provide global state access. It renders the Header and Body components.
+- **components**
+    - Header.js
+    - Body.js
+    - Footer.js
+    - TodoAdd.js
+    - TodoItem.js
+    - TodoList.js
+    - ToggleTodo.js
+    - ClearTodo.js
+    - DeleteTodo.js
+    - **user**
+        - Login.js 
+        - Register.js
 
-Header.js: Displays the app's title and a sign-out button for logged-in users.
+- **Hooks**
+    - **Store**
+        - Context.js
 
-Body.js: Handles conditional rendering based on user authentication. It shows the Login component if the user is not logged in; otherwise, it renders the main Todo components (Header, AddTodo, TodoList, Footer).
+- **styles**
+    - **modules**
+        - AddTodo.css
+        - Login.css
+        - Register.css
+        - TodoList.css
+        - TodoItem.css
+        - Header.css
+        - Footer.css
+    - Global.css
 
-Login.js: Provides a form for users to log in. It also includes a button to navigate to the registration form.
+- **utils**
+    - LocalStorageUtils.js
 
-Register.js: A registration form that allows new users to create an account by providing a username and password.
+- app.js
+  
+## Components Overview
 
-TodoList.js: Renders a list of todo items using the TodoItem component.
+- **App.js:** The root component that wraps the app in `MyContextProvider` to provide global state access. It renders the `Header` and `Body` components.
 
-TodoItem.js: Represents an individual todo item with options to toggle its completion status and delete it.
+- **Header.js:** Displays the app's title and a sign-out button for logged-in users.
 
-ToggleTodo.js: Handles the logic for toggling a todo item’s completion status.
+- **Body.js:** Handles conditional rendering based on user authentication. It shows the `Login` component if the user is not logged in; otherwise, it renders the main Todo components (`Header`, `AddTodo`, `TodoList`, `Footer`).
 
-DeleteTodo.js: Handles the logic for deleting a todo item.
+- **Login.js:** Provides a form for users to log in. It also includes a button to navigate to the registration form.
 
-ClearTodo.js: Provides a button to clear all completed todos.
+- **Register.js:** A registration form that allows new users to create an account by providing a username and password.
 
-Footer.js: Displays the number of remaining tasks and includes a button to clear completed tasks.
+- **TodoList.js:** Renders a list of todo items using the `TodoItem` component.
 
-# Context and Localstorage #
+- **TodoItem.js:** Represents an individual todo item with options to toggle its completion status and delete it.
 
-MyContext (in Context.js)
-This context provides global state for the application, including functions for authentication (login, logout, register) and managing todos (todos, setTodos). Components can access this context using the useContext hook.
+- **ToggleTodo.js:** Handles the logic for toggling a todo item’s completion status.
+
+- **DeleteTodo.js:** Handles the logic for deleting a todo item.
+
+- **ClearTodo.js:** Provides a button to clear all completed todos.
+
+- **Footer.js:** Displays the number of remaining tasks and includes a button to clear completed tasks.
+
+## Context and State Management
+
+- **MyContext (in Context.js):** This context provides global state for the application, including functions for authentication (`login`, `logout`, `register`) and managing todos (`todos`, `setTodos`). Components can access this context using the `useContext` hook.
